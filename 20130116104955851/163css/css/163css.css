@@ -1,0 +1,24 @@
+@charset "utf-8";
+body { text-align:left;font-size:13px; font-family:"宋体",Arial，Verdana;color:#3E3E3E; margin:0 auto;padding:0;}
+div,form,img,ul,ol,li,dl,dt,dd,td,span,a,th,tbody,h1,h2,h3,h4,h5,h6 { font-size:12px;font-family:"宋体",Arial，Verdana;margin:0; padding:0; border:0;text-decoration:none; }
+input,select,textarea{ font-size:12px;font-family:"宋体",Arial; }
+ul,ul li{ list-style:none;list-style-type:none; }
+a{ color:#9e9e9e; font-size:13px;}
+.box_163css{ width:100%; overflow:hidden; margin-bottom:10px;}
+.top_box{ width:100%; position:relative; height:42px;}
+.nav_top{ float:left; width:100%; height:40px; line-height:40px; background:#ffe35c; box-shadow:0 1px solid #d0b95a inset; border-bottom:2px solid #aca082; text-align:center;}
+.nav_top li{ width:25%; float:left; font-size:14px; border-bottom:1px solid #ccc;}
+.nav_top li.on{ color:#c00;}
+.nav_mid{ width:400%; height:190px; padding-top:10px; float:left;}
+
+.box01{ width:25%; text-align:left; height:190px; float:left; line-height:90px; font-size:14px; text-align:center;}
+.line{ width:25%; height:2px; background:#000; position:absolute; left:0; top:40px; display:block;}
+.line::before{ display:block; width:0; height:0; position:absolute; left:50%; margin-left:-6px;border:6px solid #000; border-color:transparent transparent #000 transparent;
+bottom:2px; display:block; content:'';}
+
+.newlist{ width:100%; float:left; margin-bottom:10px;}
+.newlist li{ height:36px; line-height:36px; position:relative; background:#f8f8f8; border-bottom:1px solid #e8e8e9;border-top:1px solid #fff;}
+.newlist li:nth-child(1){ border-top:none;}
+.newlist li a{ float:left;text-align:left; text-indent:7px;}
+.em_arrow{ display:block; width:0; height:0; position:absolute; right:5px; top:10px; border:5px solid #ccc; border-color:transparent transparent transparent #ccc;}
+.btn_href{ display:inline-block; color:#000; font-size:14px; float:left; margin-left:2%; height:30px; line-height:30px; border-radius:5px;box-shadow:0 1px 1px #dedede inset,0 1px 1px #fff; background:-webkit-gradient(linear,0 0,0 100%,from(#eee),to(#e4e4e4)); width:96%;}

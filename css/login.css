@@ -1,0 +1,14 @@
+body{ background: #f7f7f7;}
+.wrap{ margin:140px auto 0; width:980px; background: url(../img/login_bg.jpg) center center no-repeat; height:400px; background-color:#fff; border-radius:14px; box-shadow:0 0 1px #d2b9de; -webkit-transition:all .4s .1s linear;}
+.wrap:hover{ box-shadow:0 0 4px #c9a7d9;}
+.loginbar{ float:right; width:450px; height:400px; padding-right: 20px;}
+.form-horizontal{ padding-top: 100px;}
+#Verification{ width:120px;}
+#helper_capcode{cursor: pointer;}
+
+.btn{margin-left:180px; width:120px; padding-top:8px; text-shadow:1px 1px 2px #fff;}
+.control-group label{ font-size:18px; color:#666; font-weight:200;}
+
+
+.alert{margin:0 48px; margin-bottom:40px;}
+#footer{ text-align: center; margin-top: 80px;}

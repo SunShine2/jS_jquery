@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	 <link href="css/font-awesome.css" rel="stylesheet">
+	 
+	 <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.hotkeys.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+        <link href="css/index.css" rel="stylesheet">
+    <script src="js/bootstrap-wysiwyg.js"></script>
+    <link href="css/datetimepicker.css" rel="stylesheet" media="screen">
+ <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+
+ 
+<script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="js/jquery-ui-timepicker-addon.js"></script>
+<script src="js/jquery.multiselect2side.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	
+	$("#speaker_id").multiselect2side({
+		search:'Search: ',
+	    selectedPosition: 'left',
+	    moveOptions: false,
+		labelsx: '*Selected',
+		labeldx: 'Speakers List'
+	});
+	
+});
+
+	
+	 
+</script>
+
+
+</head>
+<body>
+			<div class="page" id="page">
+				<p class="page-title">Agenda/ Add Agenda<a class="btn" href="#"><i class="icon-refresh"></i>Refresh</a><a class="btn" name="btn-back" href="#"><i class="icon-arrow-left"></i>Back</a></p>
+				<div class="text-edit">
+					<form class="form-horizontal">
+						<div class="control-group" style="height:40px;">
+						  <div class="alert alert-error" style="display:inline-block;">
+								sad
+						  </div>
+					   </div>
+						<div class="control-group" style="height:40px;">
+						  <div class="alert alert-error" style="display:inline-block;">
+								sad
+						  </div>
+					   </div>
+					<div class="control-group">
+					    <label class="control-label">* Title:	</label>
+					    <div class="controls">
+					      <input type="text" class="span4" name="agenda-title">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label">*Topic:</label>
+					    <div class="controls">
+					       <select name="topic_id" id="topic_id" class="normal">
+							<option value="" selected="selected">---None---</option>
+							<option value="27">Capability Exposure &amp; Aggregation</option>
+							<option value="29">Customer Experience Management</option>
+							<option value="25">Digital Open Cloud</option>
+							<option value="26">Internetized Business Operation</option>
+							<option value="28">On-demand Resource Allocation</option>
+						 </select>
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label">Speakers:</label>
+					    <div class="controls">
+					      <select name="speaker_id[]" id="speaker_id"  multiple="multiple"   size="4">
+							<option value="28">Campbell McClean</option>
+							<option value="25">Che Haiping</option>
+							<option value="29">Chen Liang</option>
+							<option value="32">Huang Yan</option>
+							<option value="30">Lee Angell</option>
+							<option value="27">Lee Yee</option>
+							<option value="33">Luqman EL Hakiem</option>
+							<option value="34">Mac Taylor</option>
+							<option value="26">Martin Joseph Creaner</option>
+							<option value="45">Pietro Hagemann</option>
+							<option value="31">Tim Braulke</option>
+							</select>
+						</div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label">date:	</label>
+					    <div class="controls">
+					      <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
+							    <input size="16" type="text" value="" readonly name="date-time">
+							    <span class="add-on"><i class="icon-remove"></i></span>
+							    <span class="add-on"><i class="icon-calendar"></i></span>
+							</div>
+							 
+							<script type="text/javascript">
+							    $(".form_datetime").datetimepicker1({
+							        format: "dd MM yyyy - hh:ii",
+							        autoclose: true,
+							        todayBtn: true,
+							        minuteStep: 10
+							    });
+							</script> 
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label">Time:</label>
+					    <div class="controls">
+					      <input id="start-time" type="text" class="span2" name="start-time"><span class="pad">to</span><input id="end-time" type="text" class="span2" name="end-time">
+					      <script type="text/javascript">
+							    $("#start-time").datetimepicker1({
+							        format: "hh:ii",
+							        autoclose: true,
+							        todayBtn: true,
+							        minuteStep: 10,
+							        startView:1
+							    });
+							    $("#end-time").datetimepicker1({
+							        format: "hh:ii",
+							        autoclose: true,
+							        todayBtn: true,
+							        minuteStep: 10,
+							        startView:1
+							    });
+							</script> 
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label">*Venue::</label>
+					    <div class="controls">
+					      <input type="text" class="span4">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					   <label class="control-label">Description:</label>
+					    <div class="controls">
+					      <textarea rows="14" class="span4" name="agenda_Description"></textarea>
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label">status:</label>
+					    <div class="controls">
+					       <label class="radio">
+							  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option-open" checked="">
+							  open
+							</label>
+							<label class="radio">
+							  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option-close">
+							  close
+							</label>
+					    </div>
+					  </div>
+					  <div class="control-group">
+					  	<button class="btn ok-btn"><i class="icon-ok"></i>Save</button><button class="btn"><i class="icon-off"></i>Cancel</button>
+					  </div>
+					</form>
+				</div>		
+			</div>
+</body>
+</html>

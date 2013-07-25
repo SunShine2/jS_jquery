@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	 <link href="css/font-awesome.css" rel="stylesheet">
+	 <script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+        <script src="js/jquery.hotkeys.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+        <link href="css/index.css" rel="stylesheet">
+    <script src="js/bootstrap-wysiwyg.js"></script>
+
+<script>
+	$(function(){
+		$('#admin-nav>li').mouseover(function(){
+			for(var i=0,len=$('#admin-nav>li').length;i<len;i++)
+			{
+				$('#admin-nav>li').eq(i).children('a').removeClass('active');
+			}
+			$(this).children('a').addClass('active');
+		});
+
+
+		$('.admin-nav a').click(function(){
+			return false;
+		});
+		$('.admin-nav a').click(function(){
+			var shref=$(this).attr('href');
+			$('#iframe').attr('src',shref);
+		});
+
+		$('.subnav a').click(function(){
+			return false;
+		});
+		$('.subnav a').click(function(){
+			$('.subnav a').each(function(){
+				$(this).removeClass('subnav-active');
+			});
+			$(this).addClass('subnav-active');
+			var shref=$(this).attr('href');
+			$('#iframe').attr('src',shref);
+		});
+
+		
+		$("#iframe").load(function(){
+				$("#iframe").contents().find("#btn").click(function(){
+					var shref=$(this).attr('data-href');
+					$('#iframe').attr('src',shref);
+				});	
+		});
+	});
+
+</script>
+
+</head>
+<body>
+	<div class="row-fluid topcolor">
+		  	<div class="header_top">
+				<div class="logo"><a href="index.html"><img src="img/logo.gif"></a></div>
+				<div class="header_top_user_info">ITC App Content Management System V1.0</div>
+				<div class="header_top_user">Welcome <b>HUAWEI</b>, Jul 11, 2013<span><a href="#">Logout</a></span><span><a target="mainFrame" href="#">My Profile</a></span>
+					</div>
+			</div>	
+		  <div class="navbar">
+		  		<a class="welcome" href="index.html"><i class="icon-home icon-white"></i>welcome page</a>
+		  		<ul class="admin-nav" id="admin-nav">
+		  			<li>
+		  				<a href="subject.html">Summit</a>
+		  				<ul class="li-nav">
+							<li><a href="subject.html">Subject</a></li>
+							<li><a href="Landing Page.html">Landing Page</a></li>
+						</ul>
+		  			</li>
+		  			<li><a href="topic.html">Topics</a>
+		  				<ul class="li-nav">
+							<li><a href="topic.html">Topics</a></li>
+							<li><a href="add-topic.html">Add New Topic</a></li>
+						</ul>
+		  			</li>
+		  			<li><a href="speaker.html">Speakers</a>
+		  				<ul class="li-nav">
+							<li><a href="speaker.html">Speakers</a></li>
+							<li><a href="add-speaker.html">Add New Speaker</a></li>
+						</ul>
+		  			</li>
+		  			<li><a href="agenda.html">Agenda</a>
+		  				<ul class="li-nav">
+							<li><a href="agenda.html">Agenda</a></li>
+							<li><a href="add-agenda.html">Add New Agenda</a></li>
+						</ul>
+		  			</li>
+		  			<li><a href="booth.html">Booth</a>
+		  				<ul class="li-nav">
+							<li><a href="booth.html">Booth</a></li>
+							<li><a href="add-booth.html">Add New Booth</a></li>
+						</ul>
+		  			</li>
+		  			<li><a href="news.html">News</a>
+		  				<ul class="li-nav">
+							<li><a href="news.html">News</a></li>
+							<li><a href="add-News.html">Add New News</a></li>
+						</ul>
+		  			</li>
+		  			<li><a href="show.html">Live Show</a>
+		  				<ul class="li-nav">
+							<li><a href="show.html">Live Show</a></li>
+							<li><a href="add-show.html">Add New Live Show</a></li>
+						</ul>
+		  			</li>
+		  			<li><a href="contact.html">Contacts</a></li>
+		  			<li><a href="Scenic Spots.html">Travel Tips</a>
+		  				<ul class="li-nav">
+							<li><a href="Scenic Spots.html">Scenic Spots</a></li>
+							<li><a href="Dining.html">Dining Recommendations</a></li>
+							<li><a href="Transportation.html">Transportation</a></li>
+							<li><a href="hotel.html">Hotel Information</a></li>
+						</ul>
+		  			</li>
+		  			
+		  			<li><a href="Notification.html">Notification</a>
+		  				<ul class="li-nav">
+							<li><a href="Notification.html">Notification</a></li>
+							<li><a href="add-Notification.html">Add New Notification</a></li>
+						</ul></li>
+		  		</ul>	
+		  </div>
+	</div>	
+
+	<div class="row-fluid wrap clearfix">
+		
+		<div class="sidebar">
+			<ul class="subnav" id="subnav">
+				<li><a href="key.html">Keynotes Discussion</a></li>
+		  		<li><a href="News_D.html">News Discussion</a></li>
+		  		<li><a href="user-list.html">User Accounts</a></li>
+		  		<li><a href="system-user.html">System Users Management</a></li>
+			</ul>	
+		</div>
+		<div class="mainbar">
+			<iframe src="main.html" name="content" id="iframe" allowtransparency="true" align="default" frameborder=0 scrolling=no height="100" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>100?fdh:100)"></iframe>
+			<p id="footer">Copyright © 2005- 2013 iWinAD AD Co.,Ltd.　深圳市盈天下广告有限公司</p>
+		</div>	
+	</div>	
+
+	
+</body>
+</html>
